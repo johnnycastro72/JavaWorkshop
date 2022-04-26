@@ -33,6 +33,24 @@ public class ExerciseOne implements ICompareValues {
     }
 
     /**
+     * firstVal attribute accessor method
+     *
+     * @return <Float> firstVal
+     */
+    public Float firstVal() {
+        return firstVal;
+    }
+
+    /**
+     * secondVal attribute accessor method
+     *
+     * @return <Float> secondVal
+     */
+    public Float secondVal() {
+        return secondVal;
+    }
+
+    /**
      * This method compares the two values and return true if the first value it's greater than the second value
      *
      * @param firstValue  <Float> First value to compare
@@ -56,7 +74,17 @@ public class ExerciseOne implements ICompareValues {
         return (firstValue == secondValue);
     }
 
+    /**
+     * Execute the class
+     *
+     * @param args <String> arguments array for console execution.
+     */
     public static void main(String[] args) {
+        ExerciseOne exerciseOne = new ExerciseOne();
+
+        System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", exerciseOne.firstVal.toString(), ((exerciseOne.equalTo(exerciseOne.firstVal(), exerciseOne.secondVal()))? " igual ": (exerciseOne.greaterThan(exerciseOne.firstVal(), exerciseOne.secondVal()))? " mayor " : " menor ") , exerciseOne.secondVal.toString());
+        Float[] firstValues = {10.10f,30.3f,40.60f};
+        Float[] secondValues = {30.3f, 10.10f,40.60f};
 
 
     }
