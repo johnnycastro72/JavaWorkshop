@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * This class provides a solution to the requirements of exercise three.
- *
+ * <p>
  * Exercise Statement
  * Make an application that calculates the area of a circle(pi*R^2).
  * The radius will be requested by keyboard (remember to pass from String

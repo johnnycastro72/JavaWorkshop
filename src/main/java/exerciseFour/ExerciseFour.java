@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * This class provides a solution to the requirements of exercise four.
- *
+ * <p>
  * Exercise Statement
  * Read a number from the keyboard asking for the price of a product (it can have decimals) and calculate the final
  * price including VAT. The VAT will be a constant which will be 21%.
@@ -16,19 +16,19 @@ import java.util.Scanner;
 public class ExerciseFour {
 
     /**
-     * ExerciseThree Constructor
+     * ExerciseFour Constructor
      */
     public ExerciseFour() {
     }
 
     /**
-     * actualVAT attribute accessor method
+     * Decimals VAT accessor method
      *
-     * @return <Double> actualVAT
+     * @return <Double> actualVAT / 100
      */
-    public Double VAT(){
+    public Double VAT() {
         Double actualVAT = 21d;
-        return (actualVAT/100);
+        return (actualVAT / 100);
     }
 
     /**
