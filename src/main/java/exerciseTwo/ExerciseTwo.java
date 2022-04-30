@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * This class provides a solution to the requirements of exercise two.
- * <p>
+ *
  * Exercise Statement
  * To the previous exercise add console input of two values and indicate
  * whether they are greater than, less than or equal to each other.
