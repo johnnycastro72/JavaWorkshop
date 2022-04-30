@@ -82,6 +82,7 @@ public class ExerciseOne implements ICompareValues {
     public static void main(String[] args) {
         ExerciseOne exerciseOne = new ExerciseOne();
 
+        System.out.println("Exercise One:");
         System.out.println();
         System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", exerciseOne.firstVal.toString(), ((exerciseOne.equalTo(exerciseOne.firstVal(), exerciseOne.secondVal())) ? " igual " : (exerciseOne.greaterThan(exerciseOne.firstVal(), exerciseOne.secondVal())) ? " mayor " : " menor "), exerciseOne.secondVal.toString());
         Float[][] values = {{10.10f, 30.30f}, {40.60f, 15.15f}, {20.20f, 20.20f}};
