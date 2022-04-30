@@ -2,18 +2,18 @@ package exerciseOne;
 
 /**
  * This class provides a solution to the requirements of exercise one.
- *
+ * <p>
  * Exercise Statement
  * Declare 2 numeric variables (with the value you want), and indicate which is the greater of the two. If they are
  * equal, indicate that too. Change the values to check that it works.
  *
- * @version 1.0.0 26/04/2022
  * @author Jhonny Castro johnny.castro@misena.edu.co
+ * @version 1.0.0 26/04/2022
  * @since 1.0.0
  */
 public class ExerciseOne implements ICompareValues {
-    private Float firstVal = Float.valueOf(10);
-    private Float secondVal = Float.valueOf(15);
+    private Float firstVal = 10f;
+    private Float secondVal = 15f;
 
     /**
      * ExerciseOne Constructor with default values
@@ -71,7 +71,7 @@ public class ExerciseOne implements ICompareValues {
      */
     @Override
     public Boolean equalTo(Float firstValue, Float secondValue) {
-        return (firstValue == secondValue);
+        return (firstValue.equals(secondValue));
     }
 
     /**
@@ -82,10 +82,12 @@ public class ExerciseOne implements ICompareValues {
     public static void main(String[] args) {
         ExerciseOne exerciseOne = new ExerciseOne();
 
-        System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", exerciseOne.firstVal.toString(), ((exerciseOne.equalTo(exerciseOne.firstVal(), exerciseOne.secondVal()))? " igual ": (exerciseOne.greaterThan(exerciseOne.firstVal(), exerciseOne.secondVal()))? " mayor " : " menor ") , exerciseOne.secondVal.toString());
-        Float[] firstValues = {10.10f,30.3f,40.60f};
-        Float[] secondValues = {30.3f, 10.10f,40.60f};
-
+        System.out.println("");
+        System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", exerciseOne.firstVal.toString(), ((exerciseOne.equalTo(exerciseOne.firstVal(), exerciseOne.secondVal())) ? " igual " : (exerciseOne.greaterThan(exerciseOne.firstVal(), exerciseOne.secondVal())) ? " mayor " : " menor "), exerciseOne.secondVal.toString());
+        Float[][] values = {{10.10f, 30.30f}, {40.60f, 15.15f}, {20.20f, 20.20f}};
+        for (Float[] valuePair: values ) {
+            System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", valuePair[0].toString(), ((exerciseOne.equalTo(valuePair[0], valuePair[1])) ? " igual " : (exerciseOne.greaterThan(valuePair[0], valuePair[1])) ? " mayor " : " menor "), valuePair[1].toString());
+        }
 
     }
 
