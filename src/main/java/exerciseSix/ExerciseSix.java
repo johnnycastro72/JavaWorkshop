@@ -1,29 +1,23 @@
-package exerciseFive;
-
-import exerciseSix.IExerciseFiveSix;
-
-import java.util.ArrayList;
+package exerciseSix;
 
 /**
- * This class provides a solution to the requirements of exercise five.
+ * This class provides a solution to the requirements of exercise six.
  * <p>
  * Exercise Statement
- * Displays odd and even numbers from 1 to 100 (both included). Uses a while loop.
+ * Displays odd and even numbers from 1 to 100 (both included). Uses a for loop.
  *
  * @author Jhonny Castro johnny.castro@misena.edu.co
  * @version 1.0.0 29/04/2022
  * @since 1.0.0
  */
-public class ExerciseFive implements IExerciseFiveSix {
-    private final ArrayList<Integer> oddValues = new ArrayList<>();
-    private final ArrayList<Integer> evenValues = new ArrayList<>();
+public class ExerciseSix implements IExerciseFiveSix {
 
     /**
      * ExerciseFive Constructor
      *
      * @param maxNumber <Integer> Maximum number to classify
      */
-    public ExerciseFive(Integer maxNumber) {
+    public ExerciseSix(Integer maxNumber) {
         oddEvenCategorize(maxNumber);
     }
 
@@ -32,38 +26,35 @@ public class ExerciseFive implements IExerciseFiveSix {
      *
      * @param maxNumber <Integer> The higher number to categorize
      */
+    @Override
     public void oddEvenCategorize(Integer maxNumber) {
-        Integer actualValue = 1;
-        while (actualValue <= maxNumber) {
+        for (Integer actualValue = 1; actualValue < maxNumber; actualValue++) {
             if (this.isOdd(actualValue)) {
                 oddValues.add(actualValue);
-                actualValue++;
                 continue;
             }
             evenValues.add(actualValue);
-            actualValue++;
         }
+
     }
 
     /**
      * This method print the odd values
      */
+    @Override
     public void printOddValues() {
-        Integer actualValue = 0;
-        while (actualValue < oddValues.size()) {
-            System.out.println(oddValues.get(actualValue));
-            actualValue++;
+        for (Integer oddValue : oddValues) {
+            System.out.println(oddValue);
         }
     }
 
     /**
      * This method print the even values
      */
+    @Override
     public void printEvenValues() {
-        Integer actualValue = 0;
-        while (actualValue < evenValues.size()) {
-            System.out.println(evenValues.get(actualValue));
-            actualValue++;
+        for (Integer evenValue : evenValues) {
+            System.out.println(evenValue);
         }
     }
 
@@ -73,6 +64,7 @@ public class ExerciseFive implements IExerciseFiveSix {
      * @param number <Integer> Number to check
      * @return <Boolean> True the number is odd otherwise is even
      */
+    @Override
     public Boolean isOdd(Integer number) {
         Integer result = (number % 2);
         return (result != 0);
@@ -83,7 +75,7 @@ public class ExerciseFive implements IExerciseFiveSix {
      */
     @Override
     public void printResults() {
-        System.out.println("Exercise Five:");
+        System.out.println("Exercise Six:");
         System.out.println();
         System.out.println("Números impares: ");
         this.printOddValues();
@@ -98,8 +90,7 @@ public class ExerciseFive implements IExerciseFiveSix {
      * @param args <String> arguments array for console execution.
      */
     public static void main(String[] args) {
-        ExerciseFive exerciseFive = new ExerciseFive(100);
-        exerciseFive.printResults();
+        ExerciseSix exerciseSix = new ExerciseSix(100);
+        exerciseSix.printResults();
     }
-
 }
