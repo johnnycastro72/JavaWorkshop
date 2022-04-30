@@ -2,7 +2,7 @@ package exerciseOne;
 
 /**
  * This class provides a solution to the requirements of exercise one.
- * <p>
+ *
  * Exercise Statement
  * Declare 2 numeric variables (with the value you want), and indicate which is the greater of the two. If they are
  * equal, indicate that too. Change the values to check that it works.
@@ -82,11 +82,12 @@ public class ExerciseOne implements ICompareValues {
     public static void main(String[] args) {
         ExerciseOne exerciseOne = new ExerciseOne();
 
-        System.out.println("");
+        System.out.println();
         System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", exerciseOne.firstVal.toString(), ((exerciseOne.equalTo(exerciseOne.firstVal(), exerciseOne.secondVal())) ? " igual " : (exerciseOne.greaterThan(exerciseOne.firstVal(), exerciseOne.secondVal())) ? " mayor " : " menor "), exerciseOne.secondVal.toString());
         Float[][] values = {{10.10f, 30.30f}, {40.60f, 15.15f}, {20.20f, 20.20f}};
         for (Float[] valuePair: values ) {
-            System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", valuePair[0].toString(), ((exerciseOne.equalTo(valuePair[0], valuePair[1])) ? " igual " : (exerciseOne.greaterThan(valuePair[0], valuePair[1])) ? " mayor " : " menor "), valuePair[1].toString());
+            ExerciseOne exerciseOnes = new ExerciseOne(valuePair[0], valuePair[1]);
+            System.out.format("El primer valor: %-14s es %-14s al segundo valor:  %-14s%n", exerciseOnes.firstVal.toString(), ((exerciseOnes.equalTo(exerciseOnes.firstVal, exerciseOnes.secondVal)) ? " igual " : (exerciseOnes.greaterThan(exerciseOnes.firstVal, exerciseOnes.secondVal)) ? " mayor " : " menor "), exerciseOnes.secondVal.toString());
         }
 
     }
